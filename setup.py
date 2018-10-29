@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="flask_google_cloud_logger",
-    version="0.0.1",
+    version="0.0.2",
     description="Google Cloud Log Formatter for Flask",
     url="http://github.com/rai200890/flask_google_cloud_logger",
     author="Raissa Ferreira",
@@ -14,11 +14,9 @@ setup(
         "flask>=1.0",
     ],
     classifiers=[
-        "Environment :: Web Environment",
-        "Intended Audience :: Developers",
+        "Environment :: Web Environment", "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
-        "Natural Language :: English",
-        "Operating System :: OS Independent",
+        "Natural Language :: English", "Operating System :: OS Independent",
         "Programming Language :: Python :: 3 :: Only",
         "Topic :: System :: Logging"
     ],
