@@ -1,5 +1,5 @@
 from . import hooks
-from . import formatter # noqa
+from . import formatter  # noqa
 
 
 class FlaskGoogleCloudLogger(object):

@@ -10,7 +10,7 @@ setup(
     license="MIT",
     packages=["flask_google_cloud_logger"],
     install_requires=[
-        "google_cloud_logger>=0.0.2",
+        "google_cloud_logger>=0.1.0",
         "flask>=1.0",
     ],
     classifiers=[
