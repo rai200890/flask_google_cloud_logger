@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 flask_google_cloud_logger = {editable = true, path = "."}
+flask = "*"
 
 [dev-packages]
 pytest = "~=3.9.3"

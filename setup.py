@@ -1,8 +1,10 @@
 from setuptools import setup
 
+__VERSION__ = "0.1.0"
+
 setup(
     name="flask_google_cloud_logger",
-    version="0.0.2",
+    version=__VERSION__,
     description="Google Cloud Log Formatter for Flask",
     url="http://github.com/rai200890/flask_google_cloud_logger",
     author="Raissa Ferreira",

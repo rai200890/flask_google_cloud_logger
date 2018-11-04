@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e1379a7ea0bffa7097d1dc2b8fc1ab3b43f3e7e0d3c3666ae2860655e762abf7"
+            "sha256": "ce5b4b8a2381c05b4b2d867e0ca9fd3896720a9e3b8c0b4586958a71878872d6"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -28,6 +28,7 @@
                 "sha256:2271c0070dbcb5275fad4a82e29f23ab92682dc45f9dfbc22c02ba9b9322ce48",
                 "sha256:a080b744b7e345ccfcbc77954861cb05b3c63786e93f2b3875e0913d44b43f05"
             ],
+            "index": "pypi",
             "version": "==1.0.2"
         },
         "flask-google-cloud-logger": {

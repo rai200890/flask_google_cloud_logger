@@ -1,6 +1,6 @@
 import pytest
 
-from flask_google_cloud_logger.formatter import FlaskGoogleCloudFormatter
+from flask_google_cloud_logger import FlaskGoogleCloudFormatter
 
 
 @pytest.fixture

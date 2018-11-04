@@ -1,5 +1,5 @@
 from . import hooks
-from . import formatter  # noqa
+from .formatter import FlaskGoogleCloudFormatter  # noqa
 
 
 class FlaskGoogleCloudLogger(object):
@@ -18,5 +18,5 @@ class FlaskGoogleCloudLogger(object):
                 "flask_google_cloud_logger_after_request", None)
 
     def init_app(self, app):
-        app.before_request(hooks.flask_google_cloud_logger_before_request)
-        app.after_request(hooks.flask_google_cloud_logger_after_request)
+        self.app.before_request(hooks.flask_google_cloud_logger_before_request)
+        self.app.after_request(hooks.flask_google_cloud_logger_after_request)

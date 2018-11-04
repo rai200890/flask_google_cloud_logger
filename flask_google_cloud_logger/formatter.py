@@ -6,6 +6,9 @@ from google_cloud_logger import GoogleCloudFormatter
 
 
 class FlaskGoogleCloudFormatter(GoogleCloudFormatter):
+    def __init__(self, *args, **kwargs):
+        super(FlaskGoogleCloudFormatter, self).__init__(*args, **kwargs)
+
     def make_labels(self):
         if has_request_context():
             return {
