@@ -6,14 +6,15 @@ from google_cloud_logger import GoogleCloudFormatter
 
 
 class FlaskGoogleCloudFormatter(GoogleCloudFormatter):
-    def make_metadata(self, _record):
+    def __init__(self, *args, **kwargs):
+        super(FlaskGoogleCloudFormatter, self).__init__(*args, **kwargs)
+
+    def make_labels(self):
         if has_request_context():
             return {
-                "userLabels": {
-                    "client": self._make_client_info(request),
-                    "connection": self._make_connection_info(request, g),
-                    "latency": getattr(g, "request_time", None)
-                }
+                "client": self._make_client_info(request),
+                "connection": self._make_connection_info(request, g),
+                "latency": getattr(g, "request_time", None)
             }
         return {}
 
