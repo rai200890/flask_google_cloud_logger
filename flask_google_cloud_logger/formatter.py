@@ -10,13 +10,17 @@ class FlaskGoogleCloudFormatter(GoogleCloudFormatter):
         super(FlaskGoogleCloudFormatter, self).__init__(*args, **kwargs)
 
     def make_labels(self):
+        data = self.application_info or {}
         if has_request_context():
-            return {
-                "client": self._make_client_info(request),
-                "connection": self._make_connection_info(request, g),
-                "latency": getattr(g, "request_time", None)
+            data = {
+                **data,
+                **{
+                    "client": self._make_client_info(request),
+                    "connection": self._make_connection_info(request, g),
+                    "latency": getattr(g, "request_time", None)
+                }
             }
-        return {}
+        return data
 
     def _make_client_info(self, request):
         return {

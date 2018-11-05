@@ -11,7 +11,7 @@ LOG_CONFIG = {
             "()": "flask_google_cloud_logger.FlaskGoogleCloudFormatter",
             "application_info": {
                 "type": "python-application",
-                "name": "Example Application"
+                "application_name": "Example Application"
             },
             "format": "[%(asctime)s] %(levelname)s in %(module)s: %(message)s"
         }

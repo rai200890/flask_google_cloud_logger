@@ -5,11 +5,17 @@ from flask_google_cloud_logger import FlaskGoogleCloudFormatter
 
 @pytest.fixture
 def formatter():
-    return FlaskGoogleCloudFormatter("")
+    return FlaskGoogleCloudFormatter(application_info={
+        "type": "python-application",
+        "application_name": "Example Application"
+    })
 
 
 def test_make_labels_when_request_context_isnt_available(formatter, mocker):
-    assert formatter.make_labels() == {}
+    assert formatter.make_labels() == {
+        "type": "python-application",
+        "application_name": "Example Application"
+    }
 
 
 def test_make_metadata_when_request_context_is_available(formatter, mocker):
@@ -46,5 +52,7 @@ def test_make_metadata_when_request_context_is_available(formatter, mocker):
             "request_id": "4353658",
             "status": 200
         },
-        "latency": 0.01
+        "latency": 0.01,
+        "type": "python-application",
+        "application_name": "Example Application"
     }

@@ -1,6 +1,6 @@
 from setuptools import setup
 
-__VERSION__ = "0.1.0"
+__VERSION__ = "0.1.1"
 
 setup(
     name="flask_google_cloud_logger",
