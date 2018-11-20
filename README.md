@@ -2,6 +2,7 @@
 [![CircleCI](https://circleci.com/gh/rai200890/flask_google_cloud_logger.svg?style=svg&circle-token=3b2eb197f30dc714a6ba81167ddcf4e10a8c92a6)](https://circleci.com/gh/rai200890/flask_google_cloud_logger)
 [![PyPI version](https://badge.fury.io/py/flask-google-cloud-logger.svg)](https://badge.fury.io/py/flask-google-cloud-logger)
 [![Maintainability](https://api.codeclimate.com/v1/badges/937c9f897f2cf89b9918/maintainability)](https://codeclimate.com/github/rai200890/flask_google_cloud_logger/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/937c9f897f2cf89b9918/test_coverage)](https://codeclimate.com/github/rai200890/flask_google_cloud_logger/test_coverage)
 
 Flask extension to format logs according to Google Cloud v2 Specification
 

@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.6.1
+        environment:
+          CC_TEST_REPORTER_ID: fa76af93fa07e4367e214c78587ec42a0bad5e0d50d84f780027d012eb0cbb3b
     steps:
       - checkout
       - run: 
@@ -11,11 +13,20 @@ jobs:
             sudo pip install -U pip pipenv
       - run:
           command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
+          command: |
             pipenv --python python3.6
-            pipenv install --dev     
+            pipenv install --dev
+      - run:
+          command: |
+            ./cc-test-reporter before-build
       - run:
           command: |
             pipenv run pytest
+            ./cc-test-reporter format-coverage coverage/coverage.xml -t coverage.py
+            ./cc-test-reporter upload-coverage
       - run:
           command: |
             pipenv run flake8
