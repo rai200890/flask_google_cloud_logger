@@ -4,7 +4,7 @@ with open("README.md", "r") as output:
     long_description = output.read()
 
 
-__VERSION__ = "0.2.0"
+__VERSION__ = "0.2.1"
 
 setup(
     name="flask_google_cloud_logger",
@@ -18,7 +18,7 @@ setup(
     license="MIT",
     packages=find_packages(),
     install_requires=[
-        "google_cloud_logger>=0.2.0",
+        "google_cloud_logger>=0.2.1",
         "flask>=1.0",
     ],
     classifiers=[
